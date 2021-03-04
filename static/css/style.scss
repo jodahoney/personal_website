@@ -1,0 +1,22 @@
+// Primary colors:
+$background-gray: #bbbbbb !default;
+
+html {
+    background-color: $background-gray;
+}
+
+body {
+    padding: 1%;    
+}
+
+.index {
+    color: green;
+}
+
+.project_index {
+    color: red;
+}
+
+.blog_index {
+    color: purple;
+}

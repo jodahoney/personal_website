@@ -1,0 +1,20 @@
+html {
+  background-color: #bbbbbb;
+}
+
+body {
+  padding: 1%;
+}
+
+.index {
+  color: green;
+}
+
+.project_index {
+  color: red;
+}
+
+.blog_index {
+  color: purple;
+}
+/*# sourceMappingURL=style.css.map */

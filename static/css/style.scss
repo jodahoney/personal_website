@@ -1,20 +1,28 @@
 // Primary colors:
-$background-gray: #bbbbbb !default;
+$background-gray-light: #bbbbbb;
+$background-gray-dark: #757575;
+$card-background: #030964;
+$font-gray-light: #bbbbbb;
 
 html {
-    background-color: $background-gray;
+    background-color: $background-gray-light;
 }
 
 body {
-    padding: 1%;    
+    padding: 1%;
+    background-color: $background-gray-light;
+    
 }
 
 .index {
+    background-color: $background-gray-dark;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     .project_card {
+        color: $font-gray-light;
         padding: 2%;
         margin: 2%;
+        background-color: $card-background;
     }
 }
 

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
     Index
 {% endblock %}
@@ -17,26 +17,26 @@
         </div>
         <div class="row">
             <div class="card project_card col-sm">
+                <img class="card-img-top" src="{% static 'images/django-logo.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">This Portfolio Site</h5>
+                  <p class="card-text">View this projects repo on GitHub.</p>
+                  <a href="https://github.com/jodahoney/personal_website" class="btn btn-primary">GitHub</a>
+                </div>
+            </div>
+            <div class="card project_card col-sm">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">To be filled</h5>
+                  <p class="card-text">This will soon be some details about an awesome project I have done.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
             <div class="card project_card col-sm">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card project_card col-sm">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">To be filled</h5>
+                  <p class="card-text">This will soon be some details about an awesome project I have done.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>

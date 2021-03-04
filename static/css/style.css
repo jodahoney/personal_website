@@ -4,16 +4,20 @@ html {
 
 body {
   padding: 1%;
+  background-color: #bbbbbb;
 }
 
 .index {
+  background-color: #757575;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .index .project_card {
+  color: #bbbbbb;
   padding: 2%;
   margin: 2%;
+  background-color: #030964;
 }
 
 .project_index {

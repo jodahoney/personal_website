@@ -10,7 +10,12 @@ body {
 }
 
 .index {
-    color: green;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .project_card {
+        padding: 2%;
+        margin: 2%;
+    }
 }
 
 .project_index {

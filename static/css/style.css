@@ -1,23 +1,36 @@
 html {
-  background-color: #bbbbbb;
+  height: 100%;
+  margin: 0;
+  background-color: #282c34;
 }
 
 body {
-  padding: 1%;
-  background-color: #bbbbbb;
+  background-color: #282c34;
+}
+
+body .navbar-custom {
+  background-color: #21252b;
+}
+
+body .navbar-custom .nav-link {
+  font-size: large;
+  color: #61afef;
+}
+
+.container-fluid {
+  background-color: #21252b;
 }
 
 .index {
-  background-color: #757575;
+  background-color: #282c34;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #abb2bf;
 }
 
 .index .project_card {
-  color: #bbbbbb;
   padding: 2%;
   margin: 2%;
-  background-color: #030964;
 }
 
 .project_index {
@@ -26,5 +39,10 @@ body {
 
 .blog_index {
   color: purple;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
 }
 /*# sourceMappingURL=style.css.map */

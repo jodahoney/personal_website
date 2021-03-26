@@ -1,28 +1,49 @@
 // Primary colors:
-$background-gray-light: #bbbbbb;
-$background-gray-dark: #757575;
-$card-background: #030964;
-$font-gray-light: #bbbbbb;
+
+$purple: #c678dd;
+$error: #f44747;
+$coral: #e06c75;
+$whiskey: #d19a66;
+$chalky: #e5c07b;
+$lightDark: #7f848e;
+$dark: #5c6370;
+$darker: #282c34;
+$darkest: #21252b;
+$malibu: #61afef;
+$green: #98c379;
+$fountainBlue: #56b6c2;
+$invalid: #ffffff;
+$lightWhite: #abb2bf;
 
 html {
-    background-color: $background-gray-light;
+    height: 100%;
+    margin: 0;
+    background-color: $darker;
 }
 
 body {
-    padding: 1%;
-    background-color: $background-gray-light;
-    
+    background-color: $darker;
+    .navbar-custom {
+        background-color: $darkest;
+        .nav-link {
+            font-size: large;
+            color: $malibu;
+        }
+    }
 }
-
+.container-fluid {
+    background-color: $darkest;
+}
 .index {
-    background-color: $background-gray-dark;
+    background-color: $darker;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: $lightWhite;
     .project_card {
-        color: $font-gray-light;
+        
         padding: 2%;
         margin: 2%;
-        background-color: $card-background;
+
     }
 }
 
@@ -32,4 +53,9 @@ body {
 
 .blog_index {
     color: purple;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
 }

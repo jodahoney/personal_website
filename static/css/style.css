@@ -1,3 +1,7 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+}
+
 html {
   height: 100vh;
   margin: 0;
@@ -7,37 +11,67 @@ html {
 
 body {
   background-color: #282c34;
+  font-size: 100%;
 }
 
 body .main-content {
   min-height: 100vh;
-}
-
-body .navbar-custom {
-  background-color: #21252b;
-}
-
-body .navbar-custom .nav-link {
-  font-size: large;
-  color: #61afef;
+  width: 100%;
 }
 
 .sidebar {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #282c34;
+  overflow-x: hidden;
+  color: #7f848e;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar .icon {
+  padding: 0;
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.sidebar .changebtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #7f848e;
+  background-color: #282c34;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+
+.sidebar .changebtn:hover {
+  color: #abb2bf;
+}
+
+#navbar {
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
-  background-color: #111;
+  left: 100px;
+  background-color: #21252b;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
+#navbar .nav-link {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -46,35 +80,13 @@ body .navbar-custom .nav-link {
   transition: 0.3s;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
+#navbar .nav-link:hover {
+  color: #abb2bf;
 }
 
 #main {
   -webkit-transition: margin-left .5s;
   transition: margin-left .5s;
-  padding: 16px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -87,15 +99,10 @@ body .navbar-custom .nav-link {
   }
 }
 
-.container-fluid {
-  background-color: #21252b;
-}
-
 .index {
   min-height: 100vh;
   background-color: #282c34;
   color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #abb2bf;
 }
 
@@ -103,21 +110,37 @@ body .navbar-custom .nav-link {
   text-align: center;
 }
 
+.index .intro h1 {
+  font-weight: 900;
+  font-size: 400%;
+}
+
+.index .intro h2 {
+  font-weight: 700;
+  font-size: 300%;
+}
+
+.index .intro h4 {
+  font-weight: 500;
+  font-size: 200%;
+}
+
 .index .project_card {
   padding: 2%;
   margin: 2%;
 }
 
-.project_index {
-  color: red;
+.project-index {
+  color: #61afef;
+  margin-left: 100px;
+  background-color: #282c34;
+  height: 100vh;
 }
 
 .blog_index {
   color: purple;
-}
-
-.icon {
-  width: 80px;
-  height: 80px;
+  margin-left: 100px;
+  background-color: #282c34;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

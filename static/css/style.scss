@@ -1,5 +1,4 @@
 // Primary colors:
-
 $purple: #c678dd;
 $error: #f44747;
 $coral: #e06c75;
@@ -15,6 +14,10 @@ $fountainBlue: #56b6c2;
 $invalid: #ffffff;
 $lightWhite: #abb2bf;
 
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
 html {
     height: 100vh;
     margin: 0;
@@ -24,91 +27,109 @@ html {
 
 body {
     background-color: $darker;
-    
-
+    font-size: 100%;
     .main-content {
         min-height: 100vh;
-    };
-    .navbar-custom {
-        background-color: $darkest;
-        .nav-link {
-            font-size: large;
-            color: $malibu;
-        }
+        width: 100%;
     }
 }
 
+// SIDEBAR SETTINGS:
 .sidebar {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $darker;
+    overflow-x: hidden;
+    color: $lightDark;
+    ul {
+        list-style-type: none;
+    }
+
+    .icon {
+        padding: 0;
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        display: block;
+    }
+    // Button to expand and shrink side navbar
+    .changebtn {
+        font-size: 20px;
+        cursor: pointer;
+        color: $lightDark;
+        background-color: $darker;
+        border: none;
+        outline: none;
+        margin: 10px;
+    }
+    .changebtn:hover {
+        color: $lightWhite;
+    }   
+}
+
+// Collapsable navbar that is not shown by default, but comes into screen by shoving out other
+#navbar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
-    background-color: #111;
+    left: 100px;
+    background-color: $darkest;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
-
-.container-fluid {
-    background-color: $darkest;
+    // Each link tag to go to next part of website
+    .nav-link {
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: $lightWhite;
+        }
 }
+
+
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidebar {padding-top: 15px;}
+.sidebar a {font-size: 18px;}
+}
+
+
 .index {
     min-height: 100vh;
     background-color: $darker;
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: $lightWhite;
 
     .intro {
         text-align: center;
+        h1 {
+            font-weight: 900;
+            font-size: 400%;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 300%;
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 200%;
+        }
     }
+    
 
     .project_card {
         padding: 2%;
@@ -117,15 +138,17 @@ body {
 }
 
 
-.project_index {
-    color: red;
+.project-index {
+    color: $malibu;
+    margin-left: 100px;
+    background-color: $darker;
+    height: 100vh;
 }
 
 .blog_index {
     color: purple;
+    margin-left: 100px;
+    background-color: $darker;
+    height: 100vh;
 }
 
-.icon {
-    width: 80px;
-    height: 80px;
-}

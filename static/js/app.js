@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", ()=> {
-    //closeNav();
-})
-
 var nav = false;
 
 function openNav() {
@@ -20,18 +16,19 @@ function toggleNav() {
     nav ? closeNav() : openNav();
 }
 
-// function navChanger() {
-//     var nav = document.getElementById("navbar");
-//     if (nav.style.display === "none"){
-//         nav.style.display = "block";
-//     } else {
-//         nav.style.display = "none";
-//     }
-// }
 
-// const elementClicked = document.getElementById("changeButton");
-// const elementYouWantToShow = document.getElementById("navbar");
+var projects = false;
 
-// elementClicked.addEventListener("click", ()=>{
-//   elementYouWantToShow.classList.toggle("hide");
-// });
+function showProjects() {
+    document.getElementById("projects-list").style.display = "inline";
+    projects = true;
+}
+
+function hideProjects() {
+    document.getElementById("projects-list").style.display = "none";
+    projects = false;
+}
+
+function toggleProjects() {
+    projects ? hideProjects() : showProjects();
+}

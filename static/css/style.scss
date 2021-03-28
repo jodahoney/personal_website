@@ -45,6 +45,7 @@ body {
     background-color: $darker;
     overflow-x: hidden;
     color: $lightDark;
+
     ul {
         list-style-type: none;
     }
@@ -83,17 +84,48 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    ul {
+        list-style-type: none;
+    }
     // Each link tag to go to next part of website
     .nav-link {
         text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
+        font-size: 150%;
+        color: $lightDark;
         transition: 0.3s;
+        margin-left: -40px;
+        cursor: pointer;
+    }
+    .nav-link:hover {
+        color: $lightWhite;
+    }
+    .nav-icon {
+        height: 30px;
+        width: auto;
+        color: $whiskey;
+    }
+    .nav-item {
+        min-width: 250px;
+    }
+    #projects-list {
+        padding: 0;
+        margin: 0;
+        transition: 0.5s;
+
+        .project-link {
+            color: $fountainBlue;
         }
-        .nav-link:hover {
-            color: $lightWhite;
+        .project-link:hover {
+            text-decoration: none;
+            color: $malibu;
         }
+        .project-icon {
+            height: 20px;
+            width: auto;
+        }
+    }
+
+
 }
 
 

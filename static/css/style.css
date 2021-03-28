@@ -71,17 +71,53 @@ body .main-content {
   padding-top: 60px;
 }
 
+#navbar ul {
+  list-style-type: none;
+}
+
 #navbar .nav-link {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+  font-size: 150%;
+  color: #7f848e;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-left: -40px;
+  cursor: pointer;
 }
 
 #navbar .nav-link:hover {
   color: #abb2bf;
+}
+
+#navbar .nav-icon {
+  height: 30px;
+  width: auto;
+  color: #d19a66;
+}
+
+#navbar .nav-item {
+  min-width: 250px;
+}
+
+#navbar #projects-list {
+  padding: 0;
+  margin: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#navbar #projects-list .project-link {
+  color: #56b6c2;
+}
+
+#navbar #projects-list .project-link:hover {
+  text-decoration: none;
+  color: #61afef;
+}
+
+#navbar #projects-list .project-icon {
+  height: 20px;
+  width: auto;
 }
 
 #main {

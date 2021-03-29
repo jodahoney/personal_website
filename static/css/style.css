@@ -96,28 +96,32 @@ body .main-content {
 }
 
 #navbar .nav-item {
-  min-width: 250px;
+  min-width: 200px;
 }
 
-#navbar #projects-list {
+#navbar ul #projects-list {
   padding: 0;
   margin: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#navbar #projects-list .project-link {
+#navbar ul #projects-list .project-list-item {
+  margin: 8px;
+}
+
+#navbar ul #projects-list .project-link {
   color: #56b6c2;
 }
 
-#navbar #projects-list .project-link:hover {
+#navbar ul #projects-list .project-link:hover {
   text-decoration: none;
-  color: #61afef;
+  color: #e06c75;
 }
 
-#navbar #projects-list .project-icon {
-  height: 20px;
-  width: auto;
+#navbar ul #projects-list .project-icon {
+  height: 25px;
+  margin-right: 0px;
 }
 
 #main {

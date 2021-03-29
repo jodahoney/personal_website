@@ -48,19 +48,24 @@
           </li>
           <li class="nav-item">
             <a class="nav-link sub" id="projectsbtn" onclick="toggleProjects()">
-              > 
+              <span id="arrow-change">></span> 
               <img class="nav-icon" src="{% static 'images/folder-open-solid.svg' %}"> 
-              Projects</a>
+              Projects
+            </a>
           </li>
           <!-- Projects dropdown collapseable -->
             <ul id="projects-list" style="display: none;">
               <li class="project-list-item">
-                <a class="project-link" href="">Portfolio Site</a>
+                <a class="project-link" href="TODO:">
+                  <img class="project-icon" src="{% static 'images/django-logo.svg' %}" alt="Django Logo">
+                  Portfolio Site
+                </a>
               </li>
               <li class="project-list-item">
                 <a class="project-link" href="">
-                  <img class="project-icon" src="{% static 'images/python-logo.svg' %}"> 
-                  Target Inventory Bot</a>
+                <img class="project-icon" src="{% static 'images/python-logo.svg' %}" alt="Python logo"> 
+                <span class="project-link-text">Discord Bot</span>
+              </a>
               </li>
             </ul>
 

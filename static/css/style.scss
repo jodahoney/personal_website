@@ -98,6 +98,7 @@ body {
     }
     .nav-link:hover {
         color: $lightWhite;
+
     }
     .nav-icon {
         height: 30px;
@@ -105,23 +106,25 @@ body {
         color: $whiskey;
     }
     .nav-item {
-        min-width: 250px;
+        min-width: 200px;
     }
-    #projects-list {
+    ul #projects-list {
         padding: 0;
         margin: 0;
         transition: 0.5s;
-
+        .project-list-item {
+            margin: 8px;
+        }
         .project-link {
             color: $fountainBlue;
         }
         .project-link:hover {
             text-decoration: none;
-            color: $malibu;
+            color: $coral;
         }
         .project-icon {
-            height: 20px;
-            width: auto;
+            height: 25px;
+            margin-right: 0px;
         }
     }
 

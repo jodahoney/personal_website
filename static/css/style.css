@@ -144,6 +144,7 @@ body .main-content {
   background-color: #282c34;
   color: black;
   color: #abb2bf;
+  margin-left: 100px;
 }
 
 .index .intro {
@@ -175,6 +176,14 @@ body .main-content {
   margin-left: 100px;
   background-color: #282c34;
   height: 100vh;
+}
+
+.product-page {
+  background-color: #282c34;
+  margin-left: 100px;
+  height: 100vh;
+  color: #56b6c2;
+  width: 100%;
 }
 
 .blog_index {

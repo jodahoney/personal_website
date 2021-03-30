@@ -2,7 +2,7 @@ var nav = false;
 
 function openNav() {
     document.getElementById("navbar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "350px";
+    document.getElementById("main").style.marginLeft = "250px";
     nav = true;
 }
   

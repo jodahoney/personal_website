@@ -56,13 +56,13 @@
           <!-- Projects dropdown collapseable -->
             <ul id="projects-list" style="display: none;">
               <li class="project-list-item">
-                <a class="project-link" href="TODO:">
+                <a class="project-link" href="{% url 'projects:project_detail' pk=1 %}">
                   <img class="project-icon" src="{% static 'images/django-logo.svg' %}" alt="Django Logo">
                   Portfolio Site
                 </a>
               </li>
               <li class="project-list-item">
-                <a class="project-link" href="">
+                <a class="project-link" href="{% url 'projects:project_detail' pk=2 %}">
                 <img class="project-icon" src="{% static 'images/python-logo.svg' %}" alt="Python logo"> 
                 <span class="project-link-text">Discord Bot</span>
               </a>

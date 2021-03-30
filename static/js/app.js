@@ -23,12 +23,14 @@ var projects = false;
 function showProjects() {
     document.getElementById("projects-list").style.display = "inline";
     document.getElementById("arrow-change").innerHTML = 'v';
+    document.getElementById("project-folder-icon").src = "/static/images/folder-open-solid.svg"
     projects = true;
 }
 
 function hideProjects() {
     document.getElementById("projects-list").style.display = "none";
     document.getElementById("arrow-change").innerHTML = '>';
+    document.getElementById("project-folder-icon").src = "/static/images/folder-solid.svg"
     projects = false;
 }
 

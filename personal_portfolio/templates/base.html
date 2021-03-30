@@ -42,14 +42,14 @@
           <li class="nav-item home">
               <a class="nav-link" href="{% url 'index:index' %}">
                 >
-                <img class="nav-icon" src="{% static 'images/folder-open-solid.svg' %}">
+                <img class="nav-icon" src="{% static 'images/folder-solid.svg' %}">
                 Home
               </a>            
           </li>
           <li class="nav-item">
             <a class="nav-link sub" id="projectsbtn" onclick="toggleProjects()">
               <span id="arrow-change">></span> 
-              <img class="nav-icon" src="{% static 'images/folder-open-solid.svg' %}"> 
+              <img class="nav-icon" id="project-folder-icon" src="{% static 'images/folder-solid.svg' %}"> 
               Projects
             </a>
           </li>
@@ -69,8 +69,14 @@
               </li>
             </ul>
 
-          <li class="nav-item sub">
-            <a class="nav-link sub" href="{% url 'blog:blog_index' %}">blog</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:blog_index' %}">blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% static 'dehoneyResume.pdf' %}" target="_blank">
+              <img class="nav-icon" src="{% static 'images/file-pdf-regular.svg' %}" alt="PDF File icon">
+              resume.pdf
+            </a>
           </li>
         </ul>
       </div>

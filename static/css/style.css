@@ -166,6 +166,10 @@ body .main-content {
   font-size: 200%;
 }
 
+.index .function-title {
+  color: #61afef;
+}
+
 .index .project_card {
   padding: 2%;
   margin: 2%;

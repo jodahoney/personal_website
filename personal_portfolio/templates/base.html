@@ -30,11 +30,24 @@
       <!-- Permanent sidebar that just has the logo and the file expansion -->
       <div id="mySidebar" class="sidebar">
         <a>
-          <img class="icon" src="{% static 'images/logo.png' %}" alt="JD logo">
+          <img class="icon" src="{% static 'images/logo.svg' %}" alt="JD logo">
         </a>
         <button class="changebtn" id="changeButton" onclick="toggleNav()">
           <i class="far fa-copy fa-3x"></i>
         </button>
+         <!-- Social media links at the bottom of the sidebar -->
+         <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="https://github.com/jodahoney" target="_blank">
+              <img class= "social-icon" src="{% static 'images/github-brands.svg' %}">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="https://www.linkedin.com/in/jdehoney/" target="_blank">
+              <img class= "social-icon" src="{% static 'images/linkedin-brands.svg' %}"></img>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div id="navbar" style="width: 0;">
@@ -68,10 +81,6 @@
               </a>
               </li>
             </ul>
-
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:blog_index' %}">blog</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="{% static 'dehoneyResume.pdf' %}" target="_blank">
               <img class="nav-icon" src="{% static 'images/file-pdf-regular.svg' %}" alt="PDF File icon">
@@ -79,6 +88,7 @@
             </a>
           </li>
         </ul>
+       
       </div>
      
       <div class="main-content" id="main" style="margin-left: 0;">

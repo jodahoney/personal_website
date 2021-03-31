@@ -13,6 +13,7 @@ $green: #98c379;
 $fountainBlue: #56b6c2;
 $invalid: #ffffff;
 $lightWhite: #abb2bf;
+$logoBlue: #0078d7;
 
 * {
     font-family: 'Source Code Pro', monospace;
@@ -31,6 +32,18 @@ body {
     .main-content {
         min-height: 100vh;
         width: 100%;
+    }
+    .tab {
+        margin-left: 50px;
+    }
+    .green {
+        color: $green;
+    }
+    .coral {
+        color: $coral;
+    }
+    .function-title {
+        color: $malibu;
     }
 }
 
@@ -68,8 +81,22 @@ body {
         margin: 10px;
     }
     .changebtn:hover {
-        color: $lightWhite;
+        border-left: solid 5px $fountainBlue;
     }   
+
+    .social-list {
+        position: absolute;
+        padding-left: 10px;
+        bottom: 10%;
+        .social-icon {
+            height: 50px;
+            margin: 10px;
+        }
+        .social-icon:hover {
+            border-left: solid 5px $fountainBlue;
+            padding-left: 5px;
+        }
+    }
 }
 
 // Collapsable navbar that is not shown by default, but comes into screen by shoving out other
@@ -131,7 +158,6 @@ body {
 
 }
 
-
 #main {
     transition: margin-left .5s;
 }
@@ -142,33 +168,66 @@ body {
 .sidebar a {font-size: 18px;}
 }
 
-
 .index {
     min-height: 100vh;
     background-color: $darker;
     color: black;
     color: $lightWhite;
     margin-left: 100px;
-
-    .intro {
+   
+    .center {
         text-align: center;
+    }
+    .intro {
+        display: inline-block;
+        margin-top: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        text-align: left;
+        max-width: 950px;
+        font-size: 120%;
         h1 {
             font-weight: 900;
-            font-size: 400%;
+            font-size: 600%;
+            color: $fountainBlue;
         }
         h2 {
             font-weight: 700;
-            font-size: 300%;
+            font-size: 450%;
+            color: $fountainBlue;
         }
         h4 {
             font-weight: 500;
             font-size: 200%;
         }
+        .contact-me {
+            width: 100%;
+            font-size: 100%;
+            margin-left: 5%;
+        }
+        .contact-link {
+            text-decoration: none;
+            color: $lightWhite;
+        }
+        .contact-link:hover {
+            color: $lightDark;
+        }
+        #about-title {
+            margin-top: 10%;
+        }
+        #about-me-pic {
+            p {
+                width: 100%;
+            }
+            img {
+                height: 450px;
+                width: auto;
+            }
+        }
+        #recent-projects-title {
+            margin-top: 10%;
+        }
     }
-    .function-title {
-        color: $malibu;
-    }
-
     .project_card {
         padding: 2%;
         margin: 2%;

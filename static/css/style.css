@@ -19,6 +19,22 @@ body .main-content {
   width: 100%;
 }
 
+body .tab {
+  margin-left: 50px;
+}
+
+body .green {
+  color: #98c379;
+}
+
+body .coral {
+  color: #e06c75;
+}
+
+body .function-title {
+  color: #61afef;
+}
+
 .sidebar {
   width: 100px;
   height: 100%;
@@ -54,7 +70,23 @@ body .main-content {
 }
 
 .sidebar .changebtn:hover {
-  color: #abb2bf;
+  border-left: solid 5px #56b6c2;
+}
+
+.sidebar .social-list {
+  position: absolute;
+  padding-left: 10px;
+  bottom: 10%;
+}
+
+.sidebar .social-list .social-icon {
+  height: 50px;
+  margin: 10px;
+}
+
+.sidebar .social-list .social-icon:hover {
+  border-left: solid 5px #56b6c2;
+  padding-left: 5px;
 }
 
 #navbar {
@@ -147,18 +179,30 @@ body .main-content {
   margin-left: 100px;
 }
 
-.index .intro {
+.index .center {
   text-align: center;
+}
+
+.index .intro {
+  display: inline-block;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  text-align: left;
+  max-width: 950px;
+  font-size: 120%;
 }
 
 .index .intro h1 {
   font-weight: 900;
-  font-size: 400%;
+  font-size: 600%;
+  color: #56b6c2;
 }
 
 .index .intro h2 {
   font-weight: 700;
-  font-size: 300%;
+  font-size: 450%;
+  color: #56b6c2;
 }
 
 .index .intro h4 {
@@ -166,8 +210,36 @@ body .main-content {
   font-size: 200%;
 }
 
-.index .function-title {
-  color: #61afef;
+.index .intro .contact-me {
+  width: 100%;
+  font-size: 100%;
+  margin-left: 5%;
+}
+
+.index .intro .contact-link {
+  text-decoration: none;
+  color: #abb2bf;
+}
+
+.index .intro .contact-link:hover {
+  color: #7f848e;
+}
+
+.index .intro #about-title {
+  margin-top: 10%;
+}
+
+.index .intro #about-me-pic p {
+  width: 100%;
+}
+
+.index .intro #about-me-pic img {
+  height: 450px;
+  width: auto;
+}
+
+.index .intro #recent-projects-title {
+  margin-top: 10%;
 }
 
 .index .project_card {

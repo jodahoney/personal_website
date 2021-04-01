@@ -79,6 +79,7 @@ body {
         border: none;
         outline: none;
         margin: 10px;
+        transition: 0.1s;
     }
     .changebtn:hover {
         border-left: solid 5px $fountainBlue;
@@ -91,6 +92,7 @@ body {
         .social-icon {
             height: 50px;
             margin: 10px;
+            transition: 0.1s;
         }
         .social-icon:hover {
             border-left: solid 5px $fountainBlue;
@@ -184,7 +186,7 @@ body {
         margin-right: 10%;
         margin-bottom: 10%;
         text-align: left;
-        max-width: 950px;
+        max-width: 1000px;
         font-size: 120%;
         h1 {
             font-weight: 900;
@@ -226,6 +228,65 @@ body {
         }
         #recent-projects-title {
             margin-top: 10%;
+            margin-bottom: 5%;
+        }
+        .recent-projects-content {
+            .project-parent {
+                position: relative;
+                width: 100%;
+                margin-bottom: 5%;
+                img {
+                    height: 100%;
+                    width: 70%;
+                    border-radius: 5px;
+                }
+                .project-image-overlay {
+                    content: "";
+                    height: 100%;
+                    width: 70%;
+                    border-radius: 5px;
+                    z-index: 1;
+                    background-color: $fountainBlue;
+                    opacity: 40%;
+                    position: absolute;
+                    transition: 0.3s;
+                }
+                .project-image-overlay:hover {
+                    opacity: 0;
+                    box-shadow: 5px 5px $fountainBlue;
+                }
+            }
+            .project-child {
+                position: absolute;
+                z-index: 2;
+                top: 20%;
+                right: 0;
+                width: 35%;
+                height: 60%;
+                background-color: $darkest;
+                color: $lightWhite;
+                font-size: 80%;
+                border-radius: 5px;
+                padding: 1%;
+            }
+            .project-stack {
+                position: absolute;
+                bottom: 10%;
+                right: 0;
+                color: $purple;
+                text-align: right;
+                font-size: 80%;
+            }
+            .project-links {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 30px;
+                width: 50px;
+            }
+            .project-link:hover {
+                border-left: solid 5px $fountainBlue;
+            }
         }
     }
     .project_card {

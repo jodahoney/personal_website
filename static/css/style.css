@@ -67,6 +67,8 @@ body .function-title {
   border: none;
   outline: none;
   margin: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .sidebar .changebtn:hover {
@@ -82,6 +84,8 @@ body .function-title {
 .sidebar .social-list .social-icon {
   height: 50px;
   margin: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .sidebar .social-list .social-icon:hover {
@@ -189,7 +193,7 @@ body .function-title {
   margin-right: 10%;
   margin-bottom: 10%;
   text-align: left;
-  max-width: 950px;
+  max-width: 1000px;
   font-size: 120%;
 }
 
@@ -240,6 +244,73 @@ body .function-title {
 
 .index .intro #recent-projects-title {
   margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.index .intro .recent-projects-content .project-parent {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.index .intro .recent-projects-content .project-parent img {
+  height: 100%;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.index .intro .recent-projects-content .project-parent .project-image-overlay {
+  content: "";
+  height: 100%;
+  width: 70%;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #56b6c2;
+  opacity: 40%;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.index .intro .recent-projects-content .project-parent .project-image-overlay:hover {
+  opacity: 0;
+  -webkit-box-shadow: 5px 5px #56b6c2;
+          box-shadow: 5px 5px #56b6c2;
+}
+
+.index .intro .recent-projects-content .project-child {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 0;
+  width: 35%;
+  height: 60%;
+  background-color: #21252b;
+  color: #abb2bf;
+  font-size: 80%;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.index .intro .recent-projects-content .project-stack {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  color: #c678dd;
+  text-align: right;
+  font-size: 80%;
+}
+
+.index .intro .recent-projects-content .project-links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+  width: 50px;
+}
+
+.index .intro .recent-projects-content .project-link:hover {
+  border-left: solid 5px #56b6c2;
 }
 
 .index .project_card {

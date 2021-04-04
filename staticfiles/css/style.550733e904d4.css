@@ -1,0 +1,394 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+}
+
+html {
+  height: 100vh;
+  margin: 0;
+  background-color: #282c34;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #282c34;
+  font-size: 100%;
+}
+
+body .main-content {
+  min-height: 100vh;
+}
+
+body .tab {
+  margin-left: 50px;
+}
+
+body .green {
+  color: #98c379;
+}
+
+body .coral {
+  color: #e06c75;
+}
+
+body .function-title {
+  color: #61afef;
+}
+
+.sidebar {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #282c34;
+  overflow-x: hidden;
+  color: #7f848e;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar .icon {
+  padding: 0;
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.sidebar .changebtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #7f848e;
+  background-color: #282c34;
+  border: none;
+  outline: none;
+  margin: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.sidebar .changebtn:hover {
+  border-left: solid 5px #56b6c2;
+}
+
+.sidebar .social-list {
+  position: absolute;
+  padding-left: 10px;
+  bottom: 10%;
+}
+
+.sidebar .social-list .social-icon {
+  height: 50px;
+  margin: 10px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.sidebar .social-list .social-icon:hover {
+  border-left: solid 5px #56b6c2;
+  padding-left: 5px;
+}
+
+#navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 100px;
+  background-color: #21252b;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  font-size: 150%;
+  color: #7f848e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+#navbar .nav-link:hover {
+  color: #abb2bf;
+}
+
+#navbar .nav-icon {
+  height: 30px;
+  width: auto;
+  color: #d19a66;
+}
+
+#navbar .nav-item {
+  min-width: 200px;
+}
+
+#navbar ul #projects-list {
+  padding: 0;
+  margin: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#navbar ul #projects-list .project-list-item {
+  margin: 8px;
+}
+
+#navbar ul #projects-list .project-link {
+  color: #56b6c2;
+}
+
+#navbar ul #projects-list .project-link:hover {
+  text-decoration: none;
+  color: #e06c75;
+}
+
+#navbar ul #projects-list .project-icon {
+  height: 25px;
+  margin-right: 0px;
+}
+
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.index {
+  min-height: 100vh;
+  background-color: #282c34;
+  color: black;
+  color: #abb2bf;
+  margin-left: 100px;
+}
+
+.index .center {
+  text-align: center;
+}
+
+.index .intro {
+  display: inline-block;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  text-align: left;
+  max-width: 1000px;
+  font-size: 120%;
+}
+
+.index .intro h1 {
+  font-weight: 900;
+  font-size: 600%;
+  color: #56b6c2;
+}
+
+.index .intro h2 {
+  font-weight: 700;
+  font-size: 450%;
+  color: #56b6c2;
+}
+
+.index .intro h4 {
+  font-weight: 500;
+  font-size: 200%;
+}
+
+.index .intro .contact-me {
+  width: 100%;
+  font-size: 100%;
+  margin-left: 5%;
+}
+
+.index .intro .contact-link {
+  text-decoration: none;
+  color: #abb2bf;
+}
+
+.index .intro .contact-link:hover {
+  color: #7f848e;
+}
+
+.index .intro #about-title {
+  margin-top: 10%;
+}
+
+.index .intro #about-me-pic p {
+  width: 100%;
+}
+
+.index .intro #about-me-pic img {
+  height: 450px;
+  width: auto;
+}
+
+.index .intro #recent-projects-title {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.index .intro .recent-projects-content .project-parent {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.index .intro .recent-projects-content .project-parent img {
+  height: 100%;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.index .intro .recent-projects-content .project-parent .project-image-overlay {
+  content: "";
+  height: 100%;
+  width: 70%;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #56b6c2;
+  opacity: 35%;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.index .intro .recent-projects-content .project-parent .project-image-overlay:hover {
+  opacity: 0;
+  -webkit-box-shadow: 5px 5px #56b6c2;
+          box-shadow: 5px 5px #56b6c2;
+}
+
+.index .intro .recent-projects-content .project-child {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 0;
+  width: 35%;
+  height: 60%;
+  background-color: #21252b;
+  color: #abb2bf;
+  font-size: 80%;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.index .intro .recent-projects-content .project-stack {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  color: #c678dd;
+  text-align: right;
+  font-size: 80%;
+}
+
+.index .intro .recent-projects-content .project-links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+}
+
+.index .intro .recent-projects-content .project-links .project-link {
+  color: #e06c75;
+}
+
+.index .intro .recent-projects-content .project-links .project-link:hover {
+  border-left: solid 5px #56b6c2;
+  text-decoration: none;
+}
+
+.index .intro .recent-projects-content .project-links img {
+  height: 30px;
+  width: auto;
+}
+
+.index .project_card {
+  padding: 2%;
+  margin: 2%;
+}
+
+.project-index {
+  color: #61afef;
+  margin-left: 100px;
+  background-color: #282c34;
+  height: 100vh;
+}
+
+.project-page {
+  background-color: #282c34;
+  margin-left: 100px;
+  height: 100vh;
+  color: #56b6c2;
+  width: 100%;
+  text-align: center;
+}
+
+.project-page .project-content {
+  display: inline-block;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  text-align: left;
+  max-width: 1000px;
+  font-size: 120%;
+}
+
+.project-page .project-content .project-image {
+  width: 80%;
+  border: 2px solid #7f848e;
+  border-radius: 5px;
+  margin: 5%;
+}
+
+.project-page .project-content .project-links {
+  margin-bottom: 5%;
+}
+
+.project-page .project-content .project-links .project-link {
+  text-decoration: none;
+  color: #e06c75;
+  font-size: 80%;
+}
+
+.project-page .project-content .project-links .project-link img {
+  height: 80px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding-left: 10px;
+}
+
+.project-page .project-content .project-links .project-link img:hover {
+  border-left: solid 5px #56b6c2;
+}
+
+.project-page .project-content .project-about {
+  margin-bottom: 5%;
+  color: #abb2bf;
+}
+
+.blog_index {
+  color: purple;
+  margin-left: 100px;
+  background-color: #282c34;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

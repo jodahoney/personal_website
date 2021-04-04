@@ -16,7 +16,6 @@ body {
 
 body .main-content {
   min-height: 100vh;
-  max-width: 100%;
 }
 
 body .tab {

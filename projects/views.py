@@ -10,6 +10,7 @@ def project_index(request):
 
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
+    
     context = {
         'project': project
     }

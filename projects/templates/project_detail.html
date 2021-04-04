@@ -2,20 +2,40 @@
 {% load static %}
 
 {% block body %}
-<div class="product-page">
-    <h1>{{ project.title }}</h1>
-    <div class="row">
-        <div class="col-md-8">
-            <img src="{% static project.image %}" alt="" width="100%">
+<div class="project-page">
+    <div class="project-content">
+        <h1 class ="function-title">def {{ project.title }}():</h1>
+        <div class="row tab">
+
+            <div class="project-image-section">
+                {% if project.id == 1 %}
+                <img class="project-image" src="{% static 'images/portfolio.PNG' %}" alt="Image of website homepage">
+                <div class="project-links tab">
+                    <p>Visit the project repository on Github: </p>
+                    <a class="project-link" href="https://github.com/jodahoney/personal_website" target="_blank">
+                        <img src="{% static 'images/github-brands.svg' %}">
+                    </a>
+                </div>
+                
+            {% else %}
+                <img class="project-image" src="{% static 'images/inventoryBot.PNG' %}" alt="Example of inventory bot output">
+            {% endif %}
+            </div>
+
         </div>
-        <div class="col-md-4">
-            <h5>About the project:</h5>
-            <p>{{ project.description }}</p>
-            <br>
-            <h5>Technology used:</h5>
-            <p>{{ project.technology }}</p>
+        
+        <div class="row tab">
+            <div class="project-about">
+                <h2 class="green">About the project:</h2>
+                <p class="tab">{{ project.description }}</p>
+                <br>
+                <h2 class="green">Technology used:</h2>
+                <p class="tab">{{ project.technology }}</p>
+            </div>
+            
         </div>
     </div>
+    
 </div>
 
 {% endblock %}

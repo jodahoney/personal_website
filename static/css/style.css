@@ -16,7 +16,7 @@ body {
 
 body .main-content {
   min-height: 100vh;
-  width: 100%;
+  max-width: 100%;
 }
 
 body .tab {
@@ -266,7 +266,7 @@ body .function-title {
   border-radius: 5px;
   z-index: 1;
   background-color: #56b6c2;
-  opacity: 40%;
+  opacity: 35%;
   position: absolute;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -305,12 +305,21 @@ body .function-title {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 30px;
-  width: 50px;
+  width: 200px;
 }
 
-.index .intro .recent-projects-content .project-link:hover {
+.index .intro .recent-projects-content .project-links .project-link {
+  color: #e06c75;
+}
+
+.index .intro .recent-projects-content .project-links .project-link:hover {
   border-left: solid 5px #56b6c2;
+  text-decoration: none;
+}
+
+.index .intro .recent-projects-content .project-links img {
+  height: 30px;
+  width: auto;
 }
 
 .index .project_card {
@@ -325,12 +334,56 @@ body .function-title {
   height: 100vh;
 }
 
-.product-page {
+.project-page {
   background-color: #282c34;
   margin-left: 100px;
   height: 100vh;
   color: #56b6c2;
   width: 100%;
+  text-align: center;
+}
+
+.project-page .project-content {
+  display: inline-block;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  text-align: left;
+  max-width: 1000px;
+  font-size: 120%;
+}
+
+.project-page .project-content .project-image {
+  width: 80%;
+  border: 2px solid #7f848e;
+  border-radius: 5px;
+  margin: 5%;
+}
+
+.project-page .project-content .project-links {
+  margin-bottom: 5%;
+}
+
+.project-page .project-content .project-links .project-link {
+  text-decoration: none;
+  color: #e06c75;
+  font-size: 80%;
+}
+
+.project-page .project-content .project-links .project-link img {
+  height: 80px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding-left: 10px;
+}
+
+.project-page .project-content .project-links .project-link img:hover {
+  border-left: solid 5px #56b6c2;
+}
+
+.project-page .project-content .project-about {
+  margin-bottom: 5%;
+  color: #abb2bf;
 }
 
 .blog_index {

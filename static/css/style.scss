@@ -31,7 +31,7 @@ body {
     font-size: 100%;
     .main-content {
         min-height: 100vh;
-        width: 100%;
+        max-width: 100%;
     }
     .tab {
         margin-left: 50px;
@@ -247,7 +247,7 @@ body {
                     border-radius: 5px;
                     z-index: 1;
                     background-color: $fountainBlue;
-                    opacity: 40%;
+                    opacity: 35%;
                     position: absolute;
                     transition: 0.3s;
                 }
@@ -281,12 +281,20 @@ body {
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                height: 30px;
-                width: 50px;
+                width: 200px;
+                .project-link {
+                    color: $coral;
+                }
+                .project-link:hover {
+                    border-left: solid 5px $fountainBlue;
+                    text-decoration: none;
+                }
+                img {
+                    height: 30px;
+                    width: auto;
+                }
             }
-            .project-link:hover {
-                border-left: solid 5px $fountainBlue;
-            }
+           
         }
     }
     .project_card {
@@ -303,12 +311,52 @@ body {
     height: 100vh;
 }
 
-.product-page {
+.project-page {
     background-color: $darker;
     margin-left: 100px;
     height: 100vh;
     color: $fountainBlue;
     width: 100%;
+    text-align: center;
+    .project-content {
+        display: inline-block;
+        margin-top: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        text-align: left;
+        max-width: 1000px;
+        font-size: 120%;
+        .project-image {
+            width: 80%;
+            border: 2px solid $lightDark;
+            border-radius: 5px;
+            margin: 5%;
+        }
+        
+        .project-links {
+            margin-bottom: 5%;
+
+            .project-link {
+                text-decoration: none;
+                color: $coral;
+                font-size: 80%;
+                img {
+                    height: 80px;
+                    transition: 0.1s;
+                    padding-left: 10px;
+                }
+                img:hover {
+                    border-left: solid 5px $fountainBlue;
+                }
+            }
+            
+        }
+        .project-about {
+            margin-bottom: 5%;
+            color: $lightWhite;
+
+        }
+    }
 }
 
 .blog_index {

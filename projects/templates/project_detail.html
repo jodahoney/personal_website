@@ -20,10 +20,17 @@
                         <img src="{% static 'images/github-brands.svg' %}">
                     </a>
                 </div>
-                
-            {% else %}
+                {% else if project.id == 2}
                 <img class="project-image" src="{% static 'images/inventoryBot.PNG' %}" alt="Example of inventory bot output">
-            {% endif %}
+                {% else %}
+                <img class="project-image" src="{% static 'images/battle_arena.svg' %}" alt="Image of website homepage">
+                <div class="project-links tab">
+                    <p>Visit the project repository on Github: </p>
+                    <a class="project-link" href="https://github.com/jodahoney/battle_arena" target="_blank">
+                        <img src="{% static 'images/github-brands.svg' %}">
+                    </a>
+                </div>
+                {% endif %}
             </div>
 
         </div>

@@ -71,7 +71,7 @@
               <li class="project-list-item">
                 <a class="project-link" href="{% url 'projects:project_detail' pk=1 %}">
                   <img class="project-icon" src="{% static 'images/django-logo.svg' %}" alt="Django Logo">
-                  Portfolio Site
+                  Personal Website
                 </a>
               </li>
               <li class="project-list-item">
@@ -80,7 +80,14 @@
                 <span class="project-link-text">Inventory Bot</span>
               </a>
               </li>
+              <li class="project-list-item">
+                <a class="project-link" href="{% url 'projects:project_detail' pk=3 %}">
+                  <img class="project-icon" src="{% static 'images/c.svg' %}" alt="Django Logo">
+                  Battle Arena
+                </a>
+              </li>
             </ul>
+            
           <li class="nav-item">
             <a class="nav-link" href="{% static 'dehoneyResume.pdf' %}" target="_blank">
               <img class="nav-icon" src="{% static 'images/file-pdf-regular.svg' %}" alt="PDF File icon">

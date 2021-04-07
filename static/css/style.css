@@ -6,7 +6,7 @@ html {
   height: 100vh;
   margin: 0;
   background-color: #282c34;
-  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -395,7 +395,7 @@ body .row {
   }
   .index, .project-index, .project-page {
     margin-left: 0;
-    padding: 10%;
+    padding: 10% 0 0 5%;
     max-width: 100%;
     font-size: 70%;
   }

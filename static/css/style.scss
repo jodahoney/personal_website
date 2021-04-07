@@ -23,8 +23,7 @@ html {
     height: 100vh;
     margin: 0;
     background-color: $darker;
-    overflow-x: hidden;
-  
+    width: 100%;
 }
 
 body {
@@ -365,6 +364,9 @@ body {
 
 // Small screen size
 @media only screen and (max-width: 600px) {
+    body {
+
+    }
     .sidebar {
         width: 100%;
         height: 80px;
@@ -375,7 +377,7 @@ body {
     }
     .index, .project-index, .project-page {
         margin-left: 0;
-        padding: 10%;
+        padding: 10% 0 0 5%;
         max-width: 100%;
         font-size: 70%;
     }

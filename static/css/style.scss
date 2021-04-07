@@ -24,6 +24,7 @@ html {
     margin: 0;
     background-color: $darker;
     overflow-x: hidden;
+  
 }
 
 body {
@@ -43,6 +44,9 @@ body {
     }
     .function-title {
         color: $malibu;
+    }
+    .row {
+        margin: 0;
     }
 }
 
@@ -159,14 +163,8 @@ body {
 
 }
 
-#main {
+.main-content {
     transition: margin-left .5s;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-.sidebar {padding-top: 15px;}
-.sidebar a {font-size: 18px;}
 }
 
 .index {
@@ -231,68 +229,69 @@ body {
         }
         .recent-projects-content {
             .project-parent {
-                position: relative;
                 width: 100%;
                 margin-bottom: 5%;
-                img {
-                    height: 100%;
-                    width: 70%;
+                .project-image-section {
+                    position: relative;
+                    width: 100%;
+
+                    .project-image {
+                        display: block;
+                        width: 80%;
+                        height: auto;
+                        margin: 0;
+                    }
+
+                    .project-image-overlay {
+                        position: absolute;
+                        content: "";
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 5px;
+                        z-index: 1;
+                        background-color: $fountainBlue;
+                        opacity: 35%;
+                        transition: 0.3s;
+                    }
+                    .project-image-overlay:hover {
+                        opacity: 0;
+                        box-shadow: 5px 5px $fountainBlue;
+                    }
+                }
+                .project-detail {
+                    position: relative;
+                    display: block;
+                    width: 80%;
+                    height: auto;
+                    background-color: $darkest;
+                    color: $lightWhite;
+                    font-size: 100%;
                     border-radius: 5px;
+                    padding: 1%;
+                }  
+                .project-stack {
+                    color: $purple;
+                    text-align: right;
+                    margin: 1%;
                 }
-                .project-image-overlay {
-                    content: "";
-                    height: 100%;
-                    width: 70%;
-                    border-radius: 5px;
-                    z-index: 1;
-                    background-color: $fountainBlue;
-                    opacity: 35%;
-                    position: absolute;
-                    transition: 0.3s;
-                }
-                .project-image-overlay:hover {
-                    opacity: 0;
-                    box-shadow: 5px 5px $fountainBlue;
-                }
+                .project-links {
+                    width: 200px;
+                    margin: 1%;
+                    .project-link {
+                        color: $coral;
+                    }
+                    .project-link:hover {
+                        border-left: solid 5px $fountainBlue;
+                        text-decoration: none;
+                    }
+                    img {
+                        height: 30px;
+                        width: auto;
+                    }
+                } 
             }
-            .project-child {
-                position: absolute;
-                z-index: 2;
-                top: 20%;
-                right: 0;
-                width: 35%;
-                height: 60%;
-                background-color: $darkest;
-                color: $lightWhite;
-                font-size: 80%;
-                border-radius: 5px;
-                padding: 1%;
-            }
-            .project-stack {
-                position: absolute;
-                bottom: 10%;
-                right: 0;
-                color: $purple;
-                text-align: right;
-                font-size: 80%;
-            }
-            .project-links {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 200px;
-                .project-link {
-                    color: $coral;
-                }
-                .project-link:hover {
-                    border-left: solid 5px $fountainBlue;
-                    text-decoration: none;
-                }
-                img {
-                    height: 30px;
-                    width: auto;
-                }
-            }
+           
+           
            
         }
     }
@@ -301,7 +300,6 @@ body {
         margin: 2%;
     }
 }
-
 
 .project-index {
     color: $malibu;
@@ -365,3 +363,20 @@ body {
     height: 100vh;
 }
 
+// Small screen size
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+    .index, .project-index, .project-page {
+        margin-left: 0;
+        padding: 10%;
+        max-width: 100%;
+        font-size: 70%;
+    }
+}

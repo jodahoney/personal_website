@@ -68,45 +68,50 @@
             <!-- RECENT PROJECTS SECTION -->
             <!-- TODO: STILL NEED TO MAKE THIS RESPONSIVE TO SMALLER SCREEN SIZES -->
             <h4 class="function-title" id="recent-projects-title">def recent_projects():</h4>
-            <div class="row recent-projects-content tab">
+            <div class="row recent-projects-content">
                 <!-- INVENTORY BOT -->
-                <div class="project-parent">
-                    <div class="project-image-overlay">
+                <div class="tab project-parent">
+                    <div class="row project-image-section">
+                        <img class="row project-image" src="{% static 'images/inventoryBot.PNG' %}" alt="Example bot picture">
+                        <div class="project-image-overlay"></div>
                     </div>
-                    <img class="project-image" src="{% static 'images/inventoryBot.PNG' %}" alt="Example bot picture">
-                    <div class="project-child">
-                        <h4 class="project-title green">Inventory Bot:</h4>
-                        <p class="project-description">
+                
+                    <div class="row project-detail">
+                        <h4 class="row project-title green">Inventory Bot:</h4>
+                        <p class="row project-description">
                             A routine web scraping application that checks the inventory status of 
                             products from a user curated database. All alerts and interactions
                              are done through Discord.
                         </p>
-                    </div>
-                    <p class="project-stack">Python Selenium Discord Heroku</p>
-                    <div class="project-links">
-                        <a class="project-link" href="{% url 'projects:project_detail' pk=2 %}" target="_blank">
-                            Project Page <img  src="{% static 'images/external-link-alt-solid.svg' %}">
-                        </a>
-                    </div>
+                        <p class="row project-stack">Python Selenium Discord Heroku</p>
+                        <div class="project-links">
+                            <a class="project-link" href="{% url 'projects:project_detail' pk=2 %}" target="_blank">
+                                Project Page <img  src="{% static 'images/external-link-alt-solid.svg' %}">
+                            </a>
+                        </div>
+                    </div> 
                 </div>
-                <!-- THIS WEBSITE -->
-                <div class="project-parent">
-                    <div class="project-image-overlay">
+
+                <div class="tab project-parent">
+                    <div class="row project-image-section">
+                        <img class="row project-image" src="{% static 'images/battle_arena.svg' %}" alt="Screenshot of portfolio webpage">
+                        <div class="project-image-overlay"></div>
                     </div>
-                    <img class="project-image" src="{% static 'images/battle_arena.svg' %}" alt="Screenshot of portfolio webpage">
-                    <div class="project-child">
-                        <h4 class="project-title green">Battle Arena:</h4>
-                        <p class="project-description">
+                    
+                    <div class="row project-detail">
+                        <h4 class="row project-title green">Battle Arena:</h4>
+                        <p class="row project-description">
                             Battle Arena is a C++ textual multi-round tournament format game that is a competition
                             between four classes of creatures, each with their own characteristics. 
                         </p>
+                        <p class="row project-stack">C++ OOP Virtualization</p>
+                        <div class="project-links">
+                            <a class="project-link" href="{% url 'projects:project_detail' pk=3 %}" target="_blank">
+                                Project Page <img  src="{% static 'images/external-link-alt-solid.svg' %}">
+                            </a>
+                        </div>
                     </div>
-                    <p class="project-stack">C++ OOP Virtualization</p>
-                    <div class="project-links">
-                        <a class="project-link" href="{% url 'projects:project_detail' pk=3 %}" target="_blank">
-                            Project Page <img  src="{% static 'images/external-link-alt-solid.svg' %}">
-                        </a>
-                    </div>
+                   
                 </div>
             </div>
 

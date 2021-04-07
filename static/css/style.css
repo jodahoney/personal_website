@@ -34,6 +34,10 @@ body .function-title {
   color: #61afef;
 }
 
+body .row {
+  margin: 0;
+}
+
 .sidebar {
   width: 100px;
   height: 100%;
@@ -159,19 +163,9 @@ body .function-title {
   margin-right: 0px;
 }
 
-#main {
+.main-content {
   -webkit-transition: margin-left .5s;
   transition: margin-left .5s;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
 }
 
 .index {
@@ -247,76 +241,74 @@ body .function-title {
 }
 
 .index .intro .recent-projects-content .project-parent {
-  position: relative;
   width: 100%;
   margin-bottom: 5%;
 }
 
-.index .intro .recent-projects-content .project-parent img {
-  height: 100%;
-  width: 70%;
-  border-radius: 5px;
+.index .intro .recent-projects-content .project-parent .project-image-section {
+  position: relative;
+  width: 100%;
 }
 
-.index .intro .recent-projects-content .project-parent .project-image-overlay {
+.index .intro .recent-projects-content .project-parent .project-image-section .project-image {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0;
+}
+
+.index .intro .recent-projects-content .project-parent .project-image-section .project-image-overlay {
+  position: absolute;
   content: "";
+  width: 80%;
   height: 100%;
-  width: 70%;
   border-radius: 5px;
   z-index: 1;
   background-color: #56b6c2;
   opacity: 35%;
-  position: absolute;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.index .intro .recent-projects-content .project-parent .project-image-overlay:hover {
+.index .intro .recent-projects-content .project-parent .project-image-section .project-image-overlay:hover {
   opacity: 0;
   -webkit-box-shadow: 5px 5px #56b6c2;
           box-shadow: 5px 5px #56b6c2;
 }
 
-.index .intro .recent-projects-content .project-child {
-  position: absolute;
-  z-index: 2;
-  top: 20%;
-  right: 0;
-  width: 35%;
-  height: 60%;
+.index .intro .recent-projects-content .project-parent .project-detail {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: auto;
   background-color: #21252b;
   color: #abb2bf;
-  font-size: 80%;
+  font-size: 100%;
   border-radius: 5px;
   padding: 1%;
 }
 
-.index .intro .recent-projects-content .project-stack {
-  position: absolute;
-  bottom: 10%;
-  right: 0;
+.index .intro .recent-projects-content .project-parent .project-stack {
   color: #c678dd;
   text-align: right;
-  font-size: 80%;
+  margin: 1%;
 }
 
-.index .intro .recent-projects-content .project-links {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.index .intro .recent-projects-content .project-parent .project-links {
   width: 200px;
+  margin: 1%;
 }
 
-.index .intro .recent-projects-content .project-links .project-link {
+.index .intro .recent-projects-content .project-parent .project-links .project-link {
   color: #e06c75;
 }
 
-.index .intro .recent-projects-content .project-links .project-link:hover {
+.index .intro .recent-projects-content .project-parent .project-links .project-link:hover {
   border-left: solid 5px #56b6c2;
   text-decoration: none;
 }
 
-.index .intro .recent-projects-content .project-links img {
+.index .intro .recent-projects-content .project-parent .project-links img {
   height: 30px;
   width: auto;
 }
@@ -390,5 +382,22 @@ body .function-title {
   margin-left: 100px;
   background-color: #282c34;
   height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .index, .project-index, .project-page {
+    margin-left: 0;
+    padding: 10%;
+    max-width: 100%;
+    font-size: 70%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

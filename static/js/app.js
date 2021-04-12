@@ -1,26 +1,47 @@
-var nav = false;
+var windowWidth = window.innerWidth;    // width of window in pixels
+var nav = false;                        // default value of navbar presence
+var projects = false;                   // default value of projects presence
+
+function updateWindowSize() {
+    windowWidth = window.innerWidth;
+}
+window.addEventListener('resize', updateWindowSize);
 
 function openNav() {
-    document.getElementById("navbar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.getElementById("changeButton").style.cssText = "color: #abb2bf; border-left: solid 5px #56b6c2;"
-    nav = true;
+    if (windowWidth > 600) {
+        document.getElementById("navbar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("changeButton").style.cssText = "color: #abb2bf; border-left: solid 5px #56b6c2;"
+        nav = true;
+    } else {
+        document.getElementById("navbar").style.display = "inline-block";
+        document.getElementById("navbar").style.height = "150px";
+        document.getElementById("navbar").style.width = "auto";
+        document.getElementById("main").style.marginBottom = "150px";
+        nav = true;
+    }
 }
-  
+
 function closeNav() {
-    document.getElementById("navbar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    hideProjects();
-    document.getElementById("changeButton").style.cssText = ""
-    nav = false;
+    if (windowWidth > 600) {
+        document.getElementById("navbar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        hideProjects();
+        document.getElementById("changeButton").style.cssText = ""
+        nav = false;
+    } else {
+        document.getElementById("navbar").style.display = "none";
+        document.getElementById("main").style.marginBottom = "0";
+        hideProjects();
+        nav = false;
+    }
+   
 }
+
 
 function toggleNav() {
     nav ? closeNav() : openNav();
 }
-
-
-var projects = false;
 
 function showProjects() {
     document.getElementById("projects-list").style.display = "inline";

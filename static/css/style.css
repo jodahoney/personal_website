@@ -412,11 +412,13 @@ body .row {
     border: none;
     outline: none;
     margin: 10px;
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
   }
-  .sidebar .changebtn:hover {
-    border: none;
+  .sidebar #navbar {
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  .sidebar .change-icon:hover {
+    border-left: none;
   }
   .sidebar .social-list {
     position: absolute;
@@ -429,17 +431,16 @@ body .row {
   .sidebar .social-list .social-icon {
     height: 30px;
     margin: 5px;
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
   }
   .sidebar .social-list .social-icon:hover {
-    border-left: solid 5px #56b6c2;
+    border-left: none;
     padding-left: 5px;
   }
   .index, .project-index, .project-page {
     margin-left: 0;
     padding: 10% 0 0 5%;
-    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     font-size: 70%;
     font-weight: 300;
   }

@@ -14,9 +14,13 @@ function openNav() {
         document.getElementById("changeButton").style.cssText = "color: #abb2bf; border-left: solid 5px #56b6c2;"
         nav = true;
     } else {
-        document.getElementById("navbar").style.display = "inline-block";
-        document.getElementById("navbar").style.height = "150px";
-        document.getElementById("navbar").style.width = "auto";
+        document.getElementById("navbar").style.display = "block";
+        document.getElementById("navbar").style.position = "relative";
+        document.getElementById("navbar").style.left = "0px";
+        document.getElementById("navbar").style.height = "auto";
+        document.getElementById("navbar").style.width = "100%";
+        document.getElementById("navbar").style.marginTop = "40px";
+        document.getElementById("navbar").style.zIndex = "0";
         document.getElementById("main").style.marginBottom = "150px";
         nav = true;
     }

@@ -392,10 +392,12 @@ body {
             border: none;
             outline: none;
             margin: 10px;
-            transition: 0.1s;
         }
-        .changebtn:hover {
-            border: none;
+        #navbar {
+            transition: 0s;
+        }
+        .change-icon:hover {
+            border-left: none;
         }
         .social-list {
             position: absolute;
@@ -407,10 +409,9 @@ body {
             .social-icon {
                 height: 30px;
                 margin: 5px;
-                transition: 0.1s;
             }
             .social-icon:hover {
-                border-left: solid 5px $fountainBlue;
+                border-left: none;
                 padding-left: 5px;
             }
         }
@@ -419,7 +420,8 @@ body {
     .index, .project-index, .project-page {
         margin-left: 0;
         padding: 10% 0 0 5%;
-        max-width: 100%;
+        min-width: 100%;
+        min-height: 100%;
         font-size: 70%;
         font-weight: 300;
     }
